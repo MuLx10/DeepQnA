@@ -22,7 +22,10 @@ Use python 3
 """
 
 from chatbot import chatbot
+import os
 
+if not os.path.exists('save'):
+	os.mkdir('save')
 
 if __name__ == "__main__":
     chatbot = chatbot.Chatbot()

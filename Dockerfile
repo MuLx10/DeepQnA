@@ -16,11 +16,11 @@ ARG TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow
 
 RUN \
   pip3 install -U $TF_BINARY_URL
-  
+
 RUN \ 
   unzip -o data/cornell.zip -d data/cornell/
 
-#COPY ./ /root/DeepQA
+COPY ./ /root/DeepQA
 
 ## Run Config
 
@@ -29,8 +29,7 @@ ENV CHATBOT_SECRET_KEY="e#0y6^6mg37y9^+t^p_$xwnogcdh=27)f6_=v^$bh9p0ihd-%v"
 ENV CHATBOT_REDIS_URL="redis"
 EXPOSE 8000
 
-#WORKDIR /root/DeepQA/chatbot_website
-WORKDIR ./chatbot_website
+WORKDIR /root/DeepQA/chatbot_website
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
 

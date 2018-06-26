@@ -5,4 +5,5 @@
 *.pkl
 *log
 data/cornell/
+save/
 

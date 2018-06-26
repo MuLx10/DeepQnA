@@ -5,3 +5,4 @@ Django==1.10
 channels==1.1.6
 numpy==1.14.2
 redis==2.10.6
+tensorflow

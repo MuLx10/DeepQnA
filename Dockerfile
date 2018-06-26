@@ -5,7 +5,7 @@ FROM python:3.5.2
 ## Dependencies
 
 RUN \
-  apt-get -qq -y update && apt-get -y install unzip
+  apt-get -qq -y update && apt-get -y install unzip && apt-get install redis-server
 
 RUN \
   pip install -r requirements.txt && \
@@ -16,8 +16,9 @@ ARG TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow
 
 RUN \
   pip3 install -U $TF_BINARY_URL
+  
 RUN \ 
-  unzip -o data/cornell/cornell.zip -d data/cornell/
+  unzip -o data/cornell.zip -d data/cornell/
 
 #COPY ./ /root/DeepQA
 

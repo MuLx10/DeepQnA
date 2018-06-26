@@ -6,7 +6,7 @@
  ```
 ## Env vars
 ```bash
-export CHATBOT_SECRET_KEY="e#0y6^6mg37y9^+t^p_$xwnogcdh=27)f6_=v^$bh9p0ihd-%v"
+export CHATBOT_SECRET_KEY="cool"
 export CHATBOT_REDIS_URL="redis"
 ```
 ## Migrations
